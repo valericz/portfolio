@@ -5,8 +5,8 @@ const nextConfig = {
         unoptimized: true,
     },
     // Uncomment and modify basePath when deploying to GitHub Pages
-    // basePath: '/portfolio',
-    // assetPrefix: '/portfolio',
+    basePath: '/portfolio',
+    assetPrefix: '/portfolio',
 }
 
 module.exports = nextConfig 
