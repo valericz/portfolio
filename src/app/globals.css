@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+:root {
+  --foreground: #171717;
+  --background: #f9f4f7;
+  --border-color: #4a5568;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-courier-prime: var(--font-courier-prime);
+  --font-ibm-plex-serif: var(--font-ibm-plex-serif);
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(135deg, #f5e6ed 0%, #f9f4f7 100%);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  line-height: 1.5;
+}
+
+/* Column styling */
+.left-column {
+  background: linear-gradient(160deg, #f5e6ed 0%, #e9d8e3 100%);
+}
+
+/* Name and location styling */
+h1,
+.location-info {
+  font-family: var(--font-courier-prime);
+}
+
+/* Quote styling */
+.quote {
+  font-family: var(--font-courier-prime);
+  font-style: italic;
+  line-height: 1.7;
+}
+
+/* Section headings */
+.section-title {
+  font-family: var(--font-ibm-plex-serif);
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+}
+
+/* Detail links */
+.detail-link {
+  font-family: var(--font-ibm-plex-serif);
+  margin-left: 1rem;
+  font-size: 0.9rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.border-top {
+  border-top: 1px solid var(--border-color);
+  padding-top: 0.5rem;
+}
+
+/* Instagram icon styling */
+.social-icon {
+  transition: opacity 0.2s;
+}
+
+.social-icon:hover {
+  opacity: 0.7;
+}
