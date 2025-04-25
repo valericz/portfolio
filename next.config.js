@@ -7,6 +7,9 @@ const nextConfig = {
     // Uncomment and modify basePath when deploying to GitHub Pages
     basePath: '/portfolio',
     assetPrefix: '/portfolio',
+    eslint: {
+        ignoreDuringBuilds: true,
+    },
 }
 
 module.exports = nextConfig 

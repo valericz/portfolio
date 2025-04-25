@@ -29,7 +29,7 @@ const ContactSection = () => {
             await new Promise(resolve => setTimeout(resolve, 1500));
             setSubmitStatus('success');
             setFormData({ name: '', email: '', message: '' });
-        } catch (_) {
+        } catch {
             setSubmitStatus('error');
         } finally {
             setIsSubmitting(false);
