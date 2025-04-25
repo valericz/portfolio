@@ -1,22 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio
 
-## Getting Started
+A personal portfolio website built with Next.js.
 
-First, run the development server:
+## GitHub Pages Deployment Instructions
+
+### Step 1: Enable GitHub Pages in your repository
+
+1. Go to your GitHub repository
+2. Navigate to Settings > Pages
+3. Under "Source", select "GitHub Actions" as the build and deployment source
+
+### Step 2: Update your repository
+
+1. Push this code to GitHub
+2. The GitHub Actions workflow will automatically build and deploy your site
+
+### Step 3: Configure for your username
+
+If you want to deploy to your user page (username.github.io):
+
+1. Create a repository named exactly: `username.github.io`
+2. Update next.config.js to remove the basePath and assetPrefix comments
+3. Push your code to the main branch
+
+If you're deploying to a project page (username.github.io/repository-name):
+
+1. Uncomment and update the basePath and assetPrefix in next.config.js to match your repository name:
+   ```js
+   basePath: '/repository-name',
+   assetPrefix: '/repository-name',
+   ```
+2. Push your code to the main branch
+
+### Step 4: Access your deployed site
+
+After the GitHub Actions workflow completes:
+- User page: https://username.github.io
+- Project page: https://username.github.io/repository-name
+
+## Local Development
 
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
